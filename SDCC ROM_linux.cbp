@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SDCC ROM" />
+		<Option pch_mode="2" />
+		<Option compiler="sdcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/SDCC ROM.ihx" prefix_auto="0" extension_auto="0" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="sdcc" />
+				<Compiler>
+					<Add option="--opt-code-size" />
+					<Add option="--code-loc 0xC100 --data-loc 0x1000" />
+				</Compiler>
+				<ExtraCommands>
+					<Add before="sdasz80 -o ./obj/Release/crt0.rel crt0.s" />
+					<Add after='wine hex2bin -e rom &quot;./bin/Release/SDCC\ ROM.ihx&quot;' />
+					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="--no-std-crt0" />
+			<Add option="-mz80" />
+		</Compiler>
+		<Unit filename="crt0.s">
+			<Option compile="0" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
