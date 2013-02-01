@@ -1,9 +1,9 @@
 cpc-sdcc-rom
 ============
 
-This repository contains a Code::Blocks project for Amstrad CPC ROM development with the SDCC compiler.
-It is a rather simple example on how to create a ROM for the Amstrad CPC and could be extended, but I 
-hope it gives you a clue on how to create ROMs with a cross-compiler.
+This repository contains a Code::Blocks project for Amstrad CPC ROM development with the SDCC compiler
+(http://sdcc.sourceforge.net/). It is a rather simple example on how to create a ROM for the Amstrad 
+CPC and could be extended, but I hope it gives you a clue on how to create ROMs with a cross-compiler.
 
 This project works under Linux and Windows. The files and Code::Blocks projects are nearly the same,
 but under Linux the "Makefile", which was contributed by Duncan Bayne, is used within Code::Blocks
