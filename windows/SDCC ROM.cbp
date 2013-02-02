@@ -16,7 +16,7 @@
 					<Add option="--code-loc 0xC100 --data-loc 0x1000" />
 				</Compiler>
 				<ExtraCommands>
-					<Add before="sdasz80.exe -o .\obj\Release\crt0.rel crt0.s" />
+					<Add before="sdasz80.exe -o .\obj\Release\crt0.rel ..\src\crt0.s" />
 					<Add after='hex2bin.exe -e rom &quot;.\bin\Release\SDCC ROM.ihx&quot;' />
 					<Mode after="always" />
 				</ExtraCommands>
@@ -29,7 +29,7 @@
 		<Unit filename="crt0.s">
 			<Option compile="0" />
 		</Unit>
-		<Unit filename="main.c">
+		<Unit filename="..\src\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
