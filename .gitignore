@@ -1,6 +1,6 @@
-linux/bin
-linux/obj
-linux/SDCC\ ROM.layout
+unix/bin
+unix/obj
+unix/SDCC\ ROM.layout
 windows/bin
 windows/obj
-linux/SDCC\ ROM.layout
+unix/SDCC\ ROM.layout
